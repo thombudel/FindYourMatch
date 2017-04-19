@@ -1,5 +1,6 @@
 class Admin::UsersController < ApplicationController
   before_action :authenticate_user!
+  before_filter :authorized?
 
   def index
     @users = User.all
@@ -11,6 +12,13 @@ class Admin::UsersController < ApplicationController
       redirect_to :admin_users, notice: "User updated"
     else
       render 'index'
+    end
+  end
+
+  def authorized?
+    if current_user.admin == true
+    else
+      redirect_to student_path
     end
   end
 end

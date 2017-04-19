@@ -4,14 +4,15 @@
   <thead>
     <tr>
       <th>E-mail</th>
+      <th>Admin?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @users.each do |user| %>
     <tr>
       <td><%= user.email %></td>
+      <td><%= user.admin %></td>
       <td><%= link_to "Make Admin" %></td>
       <td><%= link_to "Make Student" %></td>
     </tr>

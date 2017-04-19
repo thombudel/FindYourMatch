@@ -2,48 +2,56 @@ User.destroy_all
 
 #Users
 user1 = User.create(
+name: "Thom",
 email: "thom@gmail.com",
 password: "hallo123",
 admin: true
 )
 
 user2 = User.create(
+name: "Floris",
 email: "floris@gmail.com",
 password: "hallo123",
 admin: false
 )
 
 user3 = User.create(
+name: "Mamdouh",
 email: "mamdouh@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user4 = User.create(
+name: "Pieter",
 email: "pieter@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user5 = User.create(
+name: "Johan",
 email: "johan@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user6 = User.create(
+name: "Iris",
 email: "iris@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user7 = User.create(
+name: "Kees",
 email: "kees@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user8 = User.create(
+name: "Arno",
 email: "arno@gmail.com",
 password: "hallo123",
 admin: true,

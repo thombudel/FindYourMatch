@@ -13,8 +13,13 @@
     <tr>
       <td><%= user.email %></td>
       <td><%= user.admin %></td>
-      <td><%= link_to "Make Admin" %></td>
-      <td><%= link_to "Make Student" %></td>
+      <td>
+        <% if user.admin? %>
+        <%= link_to "Set to student", admin_user_path(user.id, admin: false), method: :patch, class: "btn btn-default"  %>
+      <% else %>
+        <%= link_to "Set to admin", admin_user_path(user.id, admin: true), method: :patch, class: "btn btn-default"  %>
+        <% end %>
+      </td>
     </tr>
     <% end %>
   </tbody>

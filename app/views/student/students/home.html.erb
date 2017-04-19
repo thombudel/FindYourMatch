@@ -1,0 +1,7 @@
+<h1>Student Page</h1>
+
+<h3>Your Match of the Day is:
+  <%= [User.find(rand(0..8))] %>
+</h3>
+
+<%= link_to "See Previous Matches", class: "btn btn-default" %>

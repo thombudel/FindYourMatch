@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get '', to: 'admins#home', as: '/'
     resources :users, only:[:index, :edit, :update]
-    resources :matches, only:[:index]
+    resources :matches, only:[:index, :create, :new]
   end
 
   namespace :student do

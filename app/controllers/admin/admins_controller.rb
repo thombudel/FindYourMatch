@@ -8,7 +8,7 @@ class Admin::AdminsController < ApplicationController
   def authorized?
     if current_user.admin == true
     else
-      redirect_to student_path
+      redirect_to root_path
     end
   end
 end

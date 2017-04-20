@@ -11,7 +11,6 @@ class Admin::MatchesController < ApplicationController
   end
 
   def create
-    @match = Match.create(student_1: user[0], student_2: user[1])
   end
 
   def authorized?

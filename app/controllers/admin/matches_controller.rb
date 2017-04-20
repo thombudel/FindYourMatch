@@ -9,6 +9,7 @@ class Admin::MatchesController < ApplicationController
   def authorized?
     if current_user.admin == true
     else
+      flash[:notice] = "You are not allowed to see this!"
       redirect_to root_path
     end
   end

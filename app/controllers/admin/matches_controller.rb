@@ -6,6 +6,14 @@ class Admin::MatchesController < ApplicationController
     @matches = Match.all
   end
 
+  def new
+    @match = Match.new
+  end
+
+  def create
+    @match = Match.create(student_1: user[0], student_2: user[1])
+  end
+
   def authorized?
     if current_user.admin == true
     else
@@ -14,3 +22,8 @@ class Admin::MatchesController < ApplicationController
     end
   end
 end
+
+private
+  def match_params
+    params.require(:match).permit(:date, :student_1_id, :student_2_id)
+  end

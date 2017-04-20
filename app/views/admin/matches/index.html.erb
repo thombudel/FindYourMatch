@@ -13,8 +13,8 @@
     <% @matches.each do |match| %>
     <tr>
       <td><%= match.date %></td>
-      <td><%= match.student_1_id %></td>
-      <td><%= match.student_2_id %></td>
+      <td><%= match.student_1.name %></td>
+      <td><%= match.student_2.name %></td>
     </tr>
     <% end %>
   </tbody>

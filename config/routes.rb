@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  # get '/admin', to: 'admin#home'
+
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   namespace :admin do

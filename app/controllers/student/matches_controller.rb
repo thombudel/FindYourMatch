@@ -4,9 +4,9 @@ class Student::MatchesController < ApplicationController
 
   def index
     @matches = Match
-    .where(student_1: current_user)
+    .where(student_1: current_user).or(
+    Match.where(student_2: current_user))
   end
-
 
   def authorized?
     if current_user.admin == false

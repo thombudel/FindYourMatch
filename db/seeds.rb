@@ -133,15 +133,15 @@ date: "2017-04-21",
 student_1_id: 7,
 student_2_id: 3,
 )
-
-match1 = Match.create!(
-date: "2017-04-20",
-student_1_id: 7,
-student_2_id: 4,
-)
-
-match1 = Match.create!(
-date: "2017-04-19",
-student_1_id: 7,
-student_2_id: 10,
-)
+#
+# match1 = Match.create!(
+# date: "2017-04-20",
+# student_1_id: 7,
+# student_2_id: 4,
+# )
+#
+# match1 = Match.create!(
+# date: "2017-04-19",
+# student_1_id: 7,
+# student_2_id: 10,
+# )

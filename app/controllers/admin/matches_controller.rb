@@ -3,7 +3,7 @@ class Admin::MatchesController < ApplicationController
   before_filter :authorized?
 
   def index
-    @matches = Match.where(date: Date.today)
+    @matches = Match.all
   end
 
   def authorized?

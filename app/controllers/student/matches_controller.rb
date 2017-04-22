@@ -4,7 +4,7 @@ class Student::MatchesController < ApplicationController
 
   def index
     @matches = Match
-    .where(date: Date.today)
+    .where(student_1: current_user)
   end
 
 

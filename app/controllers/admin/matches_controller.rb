@@ -27,6 +27,7 @@ class Admin::MatchesController < ApplicationController
     student_2: unmatched_students.second,
     date: Date.today
     )
+    redirect_to :back
   end
 end
 

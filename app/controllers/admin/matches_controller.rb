@@ -30,12 +30,7 @@ class Admin::MatchesController < ApplicationController
   end
 end
 
-
 private
   def match_params
     params.require(:match).permit(:date, :student_1_id, :student_2_id)
-  end
-
-  def students_available
-    #Method to check if a user that is !admin is already paired for a day. If so, remove it from available users.
   end

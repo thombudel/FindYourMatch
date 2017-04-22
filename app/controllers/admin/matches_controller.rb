@@ -13,6 +13,21 @@ class Admin::MatchesController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def create
+    students = User.where(admin: false).order("RANDOM()")
+
+    unmatched_students = students.select do |student|
+      !student.has_match?
+    end
+
+    return if unmatched_students.count < 2
+
+    Match.create(student_1: unmatched_students.first,
+    student_2: unmatched_students.second,
+    date: Date.today
+    )
+  end
 end
 
 

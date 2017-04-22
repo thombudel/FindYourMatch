@@ -1,10 +1,6 @@
-<h1>Student Page</h1>
+<h1>Student Section</h1>
 <h2>Hi,
   <%= current_user.name %>!
 </h2>
 
-<h3>Your Match of the Day is:
-
-</h3>
-
-<%= link_to "See Previous Matches", class: "btn btn-default" %>
+<%= link_to "See Your Matches", student_matches_path, class: "btn btn-default" %>

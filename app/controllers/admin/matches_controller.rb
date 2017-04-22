@@ -3,7 +3,7 @@ class Admin::MatchesController < ApplicationController
   before_filter :authorized?
 
   def index
-    @matches = Match.where(date: Date.today)
+    @matches = Match.all
   end
 
   def authorized?
@@ -20,8 +20,6 @@ class Admin::MatchesController < ApplicationController
     unmatched_students = students.select do |student|
       !student.has_match?
     end
-
-    return if unmatched_students.count < 2
 
     Match.create(student_1: unmatched_students.first,
     student_2: unmatched_students.second,

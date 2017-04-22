@@ -24,7 +24,7 @@ admin: false
 
 user4 = User.create(
 name: "Anneke",
-email: "mamdouh@gmail.com",
+email: "anneke@gmail.com",
 password: "hallo123",
 admin: false,
 )
@@ -52,77 +52,77 @@ admin: false,
 
 user8 = User.create(
 name: "Wout",
-email: "kees@gmail.com",
+email: "wout@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user9 = User.create(
 name: "Simone",
-email: "arno@gmail.com",
+email: "simone@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user10 = User.create(
 name: "Jasper",
-email: "thom@gmail.com",
+email: "jasper@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user11 = User.create(
 name: "Tim",
-email: "floris@gmail.com",
+email: "tim@gmail.com",
 password: "hallo123",
 admin: false
 )
 
 user12 = User.create(
 name: "Martin",
-email: "mamdouh@gmail.com",
+email: "martin@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user13 = User.create(
-name: "Pieter",
-email: "pieter@gmail.com",
+name: "Ruby",
+email: "ruby@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user14 = User.create(
-name: "Johan",
-email: "johan@gmail.com",
+name: "Dave",
+email: "dave@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user15 = User.create(
-name: "Iris",
-email: "iris@gmail.com",
+name: "Wybren",
+email: "wybren@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user16 = User.create(
-name: "Kees",
-email: "kees@gmail.com",
+name: "Margriet",
+email: "margriet@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user17 = User.create(
-name: "Arno",
-email: "arno@gmail.com",
+name: "Jochem",
+email: "jochem@gmail.com",
 password: "hallo123",
 admin: false,
 )
 
 user18 = User.create(
-name: "Arno",
-email: "arno@gmail.com",
+name: "Fred",
+email: "fred@gmail.com",
 password: "hallo123",
 admin: false,
 )

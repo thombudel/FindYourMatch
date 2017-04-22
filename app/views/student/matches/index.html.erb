@@ -1,6 +1,11 @@
 <%= link_to "Back to Student Section", student_path, class: "btn btn-default" %>
+<% @all_matches.each do |match| %>
 <h3>Today you will work with:
-
+  <% if match.student_1 == current_user %>
+  <%= match.student_2.name %>
+<% else %>
+  <%= match.student_1.name %>
+  <% end %>
 </h3>
 
 <h3>Your previous matches:
@@ -16,7 +21,6 @@
     </tr>
   </thead>
   <tbody>
-    <% @matches.each do |match| %>
     <tr>
       <td><%= match.date.strftime("%d-%m-%Y") %></td>
       <td><%= match.student_1.name %></td>
@@ -25,6 +29,6 @@
       </td>
       <td><%= match.student_2.name %></td>
     </tr>
-    <% end %>
   </tbody>
 </table>
+<% end %>

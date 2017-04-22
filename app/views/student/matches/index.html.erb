@@ -1,10 +1,14 @@
 <%= link_to "Back to Student Section", student_path, class: "btn btn-default" %>
 <% @all_matches.each do |match| %>
 <h3>Today you will work with:
+  <% if match.date == Date.today %>
   <% if match.student_1 == current_user %>
   <%= match.student_2.name %>
 <% else %>
   <%= match.student_1.name %>
+  <% end %>
+<% else %>
+  no match yet!
   <% end %>
 </h3>
 

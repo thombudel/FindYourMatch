@@ -8,5 +8,9 @@ RSpec.describe Match, type: :model do
     it "is invalid without a student" do
       expect(user.errors).to_not have_key(:student_1_id)
     end
+
+    it "is invalid without a date" do
+      expect(user.errors).to_not have_key(:date)
+    end
   end
 end

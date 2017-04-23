@@ -8,10 +8,8 @@ class User < ApplicationRecord
   has_many :matches, :class_name => 'Match', :foreign_key => 'student_2'
 
   def has_match?
-    matches = Match
-    .where(date: Date.today)
-    .where(student_2: self)
-    .or(Match.where(student_1: self))
+    matches = Match.where(date: Date.today).where(student_2: self)
+    .or(Match.where(date: Date.today).where(student_1: self))
 
     matches.any?
   end

@@ -3,6 +3,8 @@ class Student::StudentsController < ApplicationController
   before_filter :authorized?
 
   def home
+    @all_matches = Match.where(student_1: current_user).or(
+    Match.where(student_2: current_user))
   end
 
   def authorized?

@@ -3,7 +3,7 @@ class Admin::MatchesController < ApplicationController
   before_filter :authorized?
 
   def index
-    @matches = Match.all
+    @matches = Match.all.order(:date)
   end
 
   def authorized?
@@ -15,17 +15,7 @@ class Admin::MatchesController < ApplicationController
   end
 
   def create
-    students = User.where(admin: false).order("RANDOM()")
-
-    unmatched_students = students.select do |student|
-      !student.has_match?
-    end
-
-    Match.create(student_1: unmatched_students.first,
-    student_2: unmatched_students.second,
-    date: Date.today
-    )
-
+    Match.create_matches
     redirect_to :back
   end
 end

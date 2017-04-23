@@ -1,14 +1,14 @@
 <%= link_to "Back to Student Section", student_path, class: "btn btn-default" %>
-<% @all_matches.each do |match| %>
+
 <h3>Today you will work with:
+<% @all_matches.each do |match| %>
   <% if match.date == Date.today %>
-  <% if match.student_1 == current_user %>
-  <i><%= match.student_2.name %></i>
-<% else %>
-  <i><%= match.student_1.name %></i>
-  <% end %>
-<% else %>
-  <i>no match yet!</i>
+      <% if match.student_1 == current_user %>
+        <i><%= match.student_2.name %></i>
+      <% else %>
+        <i><%= match.student_1.name %></i>
+      <% end %>
+    <% end %>
   <% end %>
 </h3>
 
@@ -25,16 +25,17 @@
     </tr>
   </thead>
   <tbody>
+    <% @all_matches.each do |match| %>
+    <% if match.date <= Date.today %>
     <tr>
-      <% if match.date < Date.today %>
       <td><%= match.date.strftime("%d-%m-%Y") %></td>
       <td><%= match.student_1.name %></td>
       <td>
         and
       </td>
       <td><%= match.student_2.name %></td>
-      <% end %>
     </tr>
+    <% end %>
+    <% end %>
   </tbody>
 </table>
-<% end %>

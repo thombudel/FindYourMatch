@@ -9,6 +9,8 @@ describe "list of all users" do
 
   it "lists all signed up users and shows their name and email" do
     visit admin_users_url
+    expect(page).to have_text(admin.name)
+    expect(page).to have_text(admin.email)
     expect(page).to have_text(student_1.name)
     expect(page).to have_text(student_2.name)
     expect(page).to have_text(student_1.email)

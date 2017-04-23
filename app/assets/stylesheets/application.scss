@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+* {
+  font-family: Raleway;
+}
 th {
   padding-right: 30px;
   padding-bottom: 10px;
@@ -9,4 +12,33 @@ th {
 td {
   padding-right: 30px;
   padding-bottom: 10px;
+}
+
+body {
+  background-color: #498bf4;
+  color: white;
+}
+
+.homepage {
+  border: 1px solid white;
+  height: 20em;
+  width: 50em;
+  margin-left: 25em;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.homepage h1 {
+  padding-top: 2em;
+}
+
+.btn {
+  background-color: pink;
+  margin: 2em;
+  padding: 1em 3em;
+  color: grey;
+  font-size: 15px;
+}
+
+.field {
+  color: black;
 }

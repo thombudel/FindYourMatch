@@ -1,8 +1,10 @@
-<h1>Admin Page</h1>
-<h2>Hi,
-  <%= current_user.name %>!
-</h2>
+<section align="center">
+  <h1>Admin Page</h1>
+  <h2>Hi,
+    <%= current_user.name %>!
+  </h2>
 
-<%= link_to "See All Users", admin_users_path, class: "btn btn-default" %>
+  <%= link_to "See All Users", admin_users_path, class: "btn btn-default" %>
 
-<%= link_to "See All Matches", admin_matches_path, class: "btn btn-default" %>
+  <%= link_to "See All Matches", admin_matches_path, class: "btn btn-default" %>
+</section>

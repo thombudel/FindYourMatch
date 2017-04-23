@@ -128,20 +128,26 @@ password: "hallo123",
 admin: false,
 )
 
-match1 = Match.create!(
-date: "2017-04-21",
-student_1_id: 7,
-student_2_id: 3,
-)
-#
 # match1 = Match.create!(
+# date: "2017-04-21",
+# student_1_id: 7,
+# student_2_id: 3,
+# )
+#
+# match2 = Match.create!(
 # date: "2017-04-20",
 # student_1_id: 7,
 # student_2_id: 4,
 # )
 #
-# match1 = Match.create!(
+# match3 = Match.create!(
 # date: "2017-04-19",
 # student_1_id: 7,
 # student_2_id: 10,
+# )
+#
+# match4 = Match.create!(
+# date: "2017-04-28",
+# student_1_id: 7,
+# student_2_id: 14,
 # )

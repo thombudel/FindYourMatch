@@ -1,27 +1,29 @@
 <%= link_to "Back to Admin Page", admin_path, class: "btn btn-default" %>
-<h1>All Matches</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Day</th>
-      <th>Student 1</th>
-      <th></th>
-      <th>Student 2</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @matches.each do |match| %>
-    <tr>
-      <td><%= match.date.strftime("%d-%m-%Y") %></td>
-      <td><%= match.student_1.name %></td>
-      <td>
-        and
-      </td>
-      <td><%= match.student_2.name %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<section align="center">
+  <h1>All Matches</h1>
+  <table align="center">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Student 1</th>
+        <th></th>
+        <th>Student 2</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @matches.each do |match| %>
+      <tr>
+        <td><%= match.date.strftime("%d-%m-%Y") %></td>
+        <td><%= match.student_1.name %></td>
+        <td>
+          and
+        </td>
+        <td><%= match.student_2.name %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= button_to "Create matches for today", admin_matches_path, class: "btn btn-default" %>
+  <%= button_to "Create matches for today", admin_matches_path, class: "btn btn-default" %>
+</section>

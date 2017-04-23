@@ -3,8 +3,7 @@ class Student::MatchesController < ApplicationController
   before_filter :authorized?
 
   def index
-    @all_matches = Match
-    .where(student_1: current_user).or(
+    @all_matches = Match.where(student_1: current_user).or(
     Match.where(student_2: current_user))
   end
 

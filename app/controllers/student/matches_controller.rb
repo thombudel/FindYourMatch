@@ -4,7 +4,7 @@ class Student::MatchesController < ApplicationController
 
   def index
     @all_matches = Match.where(student_1: current_user).or(
-    Match.where(student_2: current_user))
+    Match.where(student_2: current_user)).order(:date)
   end
 
   def authorized?

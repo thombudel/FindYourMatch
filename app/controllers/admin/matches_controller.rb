@@ -14,7 +14,9 @@ class Admin::MatchesController < ApplicationController
     end
   end
 
+
   def create
+    Match.previous_matches
     Match.create_matches
     redirect_to :back
   end

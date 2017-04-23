@@ -1,28 +1,30 @@
 <%= link_to "Back to Admin Page", admin_path, class: "btn btn-default" %>
-<h1>All Users</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>E-mail</th>
-      <th>Admin?</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @users.each do |user| %>
-    <tr>
-      <td><%= user.name %></td>
-      <td><%= user.email %></td>
-      <td><%= user.admin %></td>
-      <td>
-        <% if user.admin? %>
-        <%= link_to "Set to student", admin_user_path(user.id, admin: false), method: :patch, class: "btn btn-default"  %>
-      <% else %>
-        <%= link_to "Set to admin", admin_user_path(user.id, admin: true), method: :patch, class: "btn btn-default"  %>
-        <% end %>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<section align="center">
+  <h1>All Users</h1>
+  <table align="center">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>E-mail</th>
+        <th>Admin?</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.admin %></td>
+        <td>
+          <% if user.admin? %>
+          <%= link_to "Set to student", admin_user_path(user.id, admin: false), method: :patch, class: "btn btn-default"  %>
+        <% else %>
+          <%= link_to "Set to admin", admin_user_path(user.id, admin: true), method: :patch, class: "btn btn-default"  %>
+          <% end %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
